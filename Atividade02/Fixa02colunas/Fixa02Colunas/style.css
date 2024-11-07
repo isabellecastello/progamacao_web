@@ -12,10 +12,9 @@
   
   .coluna-esquerda, .coluna-direita {
     padding: 20px;
-  }
-  
-  .coluna-esquerda {
-    flex: 0 0 600px; /* Largura fixa de 600px */
+
+
+      
     background-color: #bfbcbc;
   }
   
@@ -25,8 +24,8 @@
   }
   
   header, footer {
-    background-color: #000000;
-    color: white;
+    background-color: #6A5ACD;
+    color: SlateBlue;
     text-align: center;
     padding: 20px;
     width: 100%;
