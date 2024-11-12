@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página com 3 Colunas e Containers Fixos</title>
+    <style>
+        /* Resetando o margin e padding padrão */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Estilo geral para o body */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Container fixo */
+        .container {
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+            max-width: 1200px; /* Largura máxima do container */
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            flex-wrap: wrap; /* Permite que as colunas se ajustem quando necessário */
+        }
+
+        
+        .coluna {
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #eaeaea;
+        }
+
+       
+        .coluna-esquerda {
+            width: 25%;
+            background-color: #6959CD;
+        }
+
+      
+        .coluna-central {
+            width: 50%;
+            background-color: #836FFF;
+        }
+
+       
+        .coluna-direita {
+            width: 20%;
+            background-color: #6A5ACD;
+        }
+
+        
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                width: 90%;
+            }
+
+            .coluna-esquerda, .coluna-central, .coluna-direita {
+                width: 100%; /* Colunas ocupam 100% da largura disponível */
+                margin-bottom: 20px; /* Espaçamento entre as colunas empilhadas */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Coluna Esquerda -->
+        <div class="coluna coluna-esquerda">
+            <h2>Coluna Esquerda</h2>
+            <p>Suspendisse egestas semper iaculis. Cras efficitur et massa at feugiat. Quisque placerat felis eget vulputate rhoncus. Sed porta erat ligula, nec rhoncus magna convallis a. Ut pellentesque orci in vehicula porttitor. Etiam commodo, ipsum vitae congue interdum, ante tortor bibendum est, id consectetur tellus ex sed orci. Aliquam risus mi, blandit ut augue ut, tempus aliquam nibh. Sed eu vestibulum turpis. Nunc eleifend tellus id mi rutrum luctus. Aenean tempor aliquam metus luctus auctor. Aliquam et neque nunc. Fusce suscipit placerat lorem ut viverra. Nulla facilisi. Donec a viverra velit, vel pharetra mauris.</p>
+        </div>
+
+        <!-- Coluna Central -->
+        <div class="coluna coluna-central">
+            <h2>Coluna Central</h2>
+            <p>Suspendisse egestas semper iaculis. Cras efficitur et massa at feugiat. Quisque placerat felis eget vulputate rhoncus. Sed porta erat ligula, nec rhoncus magna convallis a. Ut pellentesque orci in vehicula porttitor. Etiam commodo, ipsum vitae congue interdum, ante tortor bibendum est, id consectetur tellus ex sed orci. Aliquam risus mi, blandit ut augue ut, tempus aliquam nibh. Sed eu vestibulum turpis. Nunc eleifend tellus id mi rutrum luctus. Aenean tempor aliquam metus luctus auctor. Aliquam et neque nunc. Fusce suscipit placerat lorem ut viverra. Nulla facilisi. Donec a viverra velit, vel pharetra mauris.</p>
+        </div>
+
+        <!-- Coluna Direita -->
+        <div class="coluna coluna-direita">
+            <h2>Coluna Direita</h2>
+            <p>Suspendisse egestas semper iaculis. Cras efficitur et massa at feugiat. Quisque placerat felis eget vulputate rhoncus. Sed porta erat ligula, nec rhoncus magna convallis a. Ut pellentesque orci in vehicula porttitor. Etiam commodo, ipsum vitae congue interdum, ante tortor bibendum est, id consectetur tellus ex sed orci. Aliquam risus mi, blandit ut augue ut, tempus aliquam nibh. Sed eu vestibulum turpis. Nunc eleifend tellus id mi rutrum luctus. Aenean tempor aliquam metus luctus auctor. Aliquam et neque nunc. Fusce suscipit placerat lorem ut viverra. Nulla facilisi. Donec a viverra velit, vel pharetra mauris..</p>
+        </div>
+    </div>
+</body>
+</html>
