@@ -1,0 +1,207 @@
+/* Importando a fonte Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Resetando estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* ====== BODY (Fundo do Site com Animação) ====== */
+body {
+    background: linear-gradient(-45deg, #f8e3e3, #f5d2d2, #d10000, #8b0000);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+    color: #333;
+    text-align: center;
+}
+
+/* Animação do fundo */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ====== HEADER ====== */
+header {
+    background: rgba(179, 0, 0, 0.9);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 16px;
+    transition: all 0.3s ease-in-out;
+    border-radius: 5px;
+    position: relative;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.3);
+    text-decoration: none;
+}
+
+/* ====== SEARCH & PROFILE ====== */
+.search-profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-profile input {
+    padding: 8px;
+    border-radius: 20px;
+    border: none;
+    font-size: 14px;
+    outline: none;
+    padding-left: 15px;
+    transition: 0.3s ease-in-out;
+}
+
+.search-profile input:focus {
+    box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.6);
+}
+
+.profile-icon {
+    font-size: 24px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.profile-icon:hover {
+    transform: scale(1.1);
+}
+
+/* ====== MAIN CONTENT (Glassmorphism) ====== */
+main {
+    text-align: center;
+    padding: 120px 20px 40px;
+    max-width: 900px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 40px;
+    border-radius: 15px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    transition: 0.3s ease-in-out;
+}
+
+main:hover {
+    transform: scale(1.02);
+}
+
+main h1 {
+    font-size: 34px;
+    color: #b30000;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+main p {
+    font-size: 18px;
+    margin: 10px 0;
+    line-height: 1.8;
+    color: #fff;
+    font-weight: 300;
+}
+
+/* ====== BOTÃO INTERATIVO ====== */
+button {
+    background: #b30000;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+    background: #d10000;
+    box-shadow: 0px 6px 15px rgba(255, 255, 255, 0.5);
+}
+
+/* ====== IMAGEM ====== */
+.image-container {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.image-container img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.image-container img:hover {
+    transform: scale(1.05);
+}
+
+/* ====== RESPONSIVIDADE ====== */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .search-profile {
+        margin-top: 10px;
+    }
+
+    main {
+        padding: 20px;
+        width: 90%;
+    }
+}
+
