@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">Arte em Crochê</h1>
+            <nav class="nav">
+                <ul>
+                    <li><a href="/">Início</a></li>
+                    <li><a href="/tutoriais">Tutoriais</a></li>
+                    <li><a href="/padroes">Padrões</a></li>
+                    <li><a href="/contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="hero">
+            <div class="container">
+                <h2>Cultive sua Arte</h2>
+                <p>Descubra o mundo do crochê com nossos tutoriais e padrões exclusivos.</p>
+                <a href="/tutoriais" class="btn">Comece Agora</a>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <% tutoriais.forEach(tutorial => { %>
+                    <div class="feature-card">
+                        <img src="<%= tutorial.imagem %>" alt="<%= tutorial.titulo %>" class="imagem-pequena">
+                        <h3><%= tutorial.titulo %></h3>
+                        <p><%= tutorial.descricao %></p>
+                    </div>
+                <% }) %>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 Arte em Crochê. Todos os direitos reservados.</p>
+            <ul class="social-links">
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">YouTube</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
