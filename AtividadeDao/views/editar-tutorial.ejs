@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Tutorial</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    <h2>Editar Tutorial</h2>
+    <form action="/tutoriais/editar/<%= tutorial._id %>" method="POST">
+        <input type="text" name="titulo" value="<%= tutorial.titulo %>" required>
+        <textarea name="descricao" required><%= tutorial.descricao %></textarea>
+        <input type="text" name="imagem" value="<%= tutorial.imagem %>" required>
+        <button type="submit">Salvar</button>
+    </form>
+</body>
+</html>

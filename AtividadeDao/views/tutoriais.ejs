@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutoriais - Arte em Crochê</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">Arte em Crochê</h1>
+            <nav class="nav">
+                <ul>
+                    <li><a href="/">Início</a></li>
+                    <li><a href="/tutoriais">Tutoriais</a></li>
+                    <li><a href="/padroes">Padrões</a></li>
+                    <li><a href="/contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Seção de Tutoriais -->
+    <section class="tutorials">
+        <div class="container">
+            <h2 class="section-title">Tutoriais</h2>
+
+            <!-- Formulário para adicionar tutorial -->
+            <form action="/tutoriais" method="POST" class="tutorial-form">
+                <input type="text" name="titulo" placeholder="Título do Tutorial" required>
+                <textarea name="descricao" placeholder="Descrição" required></textarea>
+                <input type="text" name="imagem" placeholder="Caminho da imagem (ex.: /images/nova.jpg)" required>
+                <button type="submit" class="btn">Adicionar Tutorial</button>
+            </form>
+
+            <!-- Lista de tutoriais -->
+            <div class="tutorial-list">
+                <% tutoriais.forEach(tutorial => { %>
+                    <div class="tutorial-card">
+                        <img src="<%= tutorial.imagem %>" alt="<%= tutorial.titulo %>" class="imagem-pequena">
+                        <h3><%= tutorial.titulo %></h3>
+                        <p><%= tutorial.descricao %></p>
+                        <div class="tutorial-actions">
+                            <a href="/tutoriais/editar/<%= tutorial._id %>" class="btn">Editar</a>
+                            <form action="/tutoriais/<%= tutorial._id %>?_method=DELETE" method="POST" style="display: inline;">
+                                <button type="submit" class="btn">Excluir</button>
+                            </form>
+                            <form action="/tutoriais/favorito/<%= tutorial._id %>" method="POST" style="display: inline;">
+                                <button type="submit" class="btn">
+                                    <%= tutorial.favorito ? 'Remover dos Favoritos' : 'Adicionar aos Favoritos' %>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                <% }) %>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2023 Arte em Crochê. Todos os direitos reservados.</p>
+            <ul class="social-links">
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
