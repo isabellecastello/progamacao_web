@@ -1,0 +1,166 @@
+/* Estilos Globais */
+body {
+  font-family: 'Quicksand', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+  color: #333;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Cabeçalho */
+.header {
+  background-color: #2A9D8F;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.logo {
+  font-family: 'Dancing Script', cursive;
+  font-size: 3rem;
+  color: #fff;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav ul li a:hover {
+  color: #E76F51;
+}
+
+/* Seção Hero */
+.hero {
+  background: url('https://via.placeholder.com/1200x600') no-repeat center center/cover;
+  color: rgb(7, 5, 5);
+  padding: 150px 0;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.btn {
+  background-color: #F4A261;
+  color: rgb(255, 255, 255);
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #F4A261;
+}
+
+/* Seção de Recursos */
+.features {
+  padding: 50px 0;
+  background-color: #F4A261;
+}
+
+.feature-card {
+  background-color: #fffcf9;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+}
+
+.feature-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.feature-card p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Estilo para diminuir as imagens nas subtelas */
+.imagem-pequena {
+  width: 100%; /* A imagem ocupa 100% da largura do contêiner */
+  height: auto; /* Mantém a proporção */
+  border-radius: 10px; /* Bordas arredondadas */
+  margin-bottom: 15px;
+}
+
+/* Rodapé */
+.footer {
+  background: linear-gradient(135deg, #2A9D8F, #1E6F5C);
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.social-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-links li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-links li a:hover {
+  color: #E76F51;
+}.tutorial-form {
+  margin-bottom: 2rem;
+}
+
+.tutorial-form input, 
+.tutorial-form textarea {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.tutorial-form button {
+  background-color: #ff6f61;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+.tutorial-form button:hover {
+  background-color: #e65b50;
+}
